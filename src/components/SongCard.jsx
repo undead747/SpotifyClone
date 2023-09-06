@@ -6,7 +6,9 @@ import { useDispatch } from "react-redux";
 const SongCard = ({ song, activeSong, isPlaying, data, i }) => {
   const dispatch = useDispatch();
 
-  const handlePauseClick = () => { };
+  const handlePauseClick = () => {
+    dispatch(playPause(false));
+   };
 
   const handlePlayClick = () => { 
     dispatch(setActiveSong({song, data, i}));
