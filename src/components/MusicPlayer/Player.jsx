@@ -19,7 +19,7 @@ const Player = ({ activeSong, isPlaying, volume, seekTime, onEnded, onTimeUpdate
   useEffect(() => {
     ref.current.currentTime = seekTime;
   }, [seekTime]);
-
+  debugger
   return (
     <audio
       src={activeSong?.hub?.actions[1]?.uri}
